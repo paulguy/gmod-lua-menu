@@ -1,11 +1,11 @@
 
 surface.CreateFont( "rb655_AddonName", {
-	size = ScreenScale( 12 ),
+	size = ScreenScale( 24 ),
 	font = "Tahoma"
 } )
 
 surface.CreateFont( "rb655_AddonDesc", {
-	size = ScreenScale( 8 ),
+	size = ScreenScale( 16 ),
 	font = "Tahoma"
 } )
 

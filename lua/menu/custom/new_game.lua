@@ -17,31 +17,31 @@ Figure out fonts? The current ones look neat but blurry
 
 surface.CreateFont( "StartNewGameFont", {
 	font = "Roboto Lt",
-	size = 18,
+	size = 36,
 } )
 
 surface.CreateFont( "SingleMultiPlayer", {
 	font = "Roboto Lt",
-	size = 17,
+	size = 34,
 } )
 
 surface.CreateFont( "DermaRobotoDefault", {
 	font = "Roboto Lt",
-	size = 13
+	size = 26
 } )
 
 surface.CreateFont( "StartNewGame", {
 	font = "Roboto",
-	size = 30,
+	size = 60,
 } )
 
 surface.CreateFont( "rb655_MapList", {
-	size = 12,
+	size = 24,
 	font = "Tahoma"
 } )
 
 surface.CreateFont( "rb655_MapSubCat", {
-	size = 30,
+	size = 60,
 	--weight = 900,
 	font = "Roboto Lt"
 } )
@@ -775,7 +775,7 @@ function PANEL:SelectCat( cat )
 				button.m_Image:SetMaterial( gMapIcons[ map.name ] )
 			end
 
-			button:SetSize( 128, 128 )
+			button:SetSize( 256, 256 )
 			button.DoClick = function()
 				self:SelectMap( map.name, cat )
 			end
@@ -798,9 +798,9 @@ function PANEL:SelectCat( cat )
 
 				local tw = surface.GetTextSize( button:GetText() )
 				if ( tw > w ) then
-					draw.SimpleText( button:GetText(), "rb655_MapList", w / 2 - tw / 2 + ( ( w - tw ) * math.sin( CurTime() ) ), h - 16, color_white, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+					draw.SimpleText( button:GetText(), "rb655_MapList", w / 2 - tw / 2 + ( ( w - tw ) * math.sin( CurTime() ) ), h - 20, color_white, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 				else
-					draw.SimpleText( button:GetText(), "rb655_MapList", w / 2 - tw / 2, h - 16, color_white, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+					draw.SimpleText( button:GetText(), "rb655_MapList", w / 2 - tw / 2, h - 20, color_white, TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 				end
 
 			end
